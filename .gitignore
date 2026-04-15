@@ -1,0 +1,120 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Environment files
+.env
+.env.local
+.env.production
+.venv/
+venv/
+ENV/
+env/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Project specific
+temp/
+temp/**/*
+!temp/.gitkeep
+
+# Logs
+*.log
+.logs/
+logs/
+
+# Cache
+.cache/
+.cache_ggshield
+
+# Media files
+*.mp4
+*.wav
+*.avi
+*.mov
+*.mkv
+
+# Music files - block by default but allow in static/music
+*.mp3
+
+# Exception: Allow music files in app/static/music directory
+!app/static/music/*.mp3
+uploads/
+downloads/
+
+# Model files
+# Ignore generated or downloaded model directories by default
+models/
+# But keep service agent model helpers
+!app/services/agents/models/
+!app/services/agents/models/**
+*.pth
+*.bin
+*.safetensors
+
+# Redis dumps
+dump.rdb
+
+# AI
+.claude/
+.vscode/
+.cache_ggshield
+vadoo.md
+
+short-video-maker/
+
+KittenTTS/
+marker/
+
+
+# Ignore kluster.ai Verify Code rules
+.github/instructions/kluster-code-verify.instructions.md
+
+ai-agents-no-code-tools/
+
+.kluster
+
+no-code-architects-toolkit/
+
+openai-edge-tts/
+
+any-llm/
+
+examples/
+
+Open-LLM-webchat/
+
+augment-kv-store/
+
+agent-chat-ui/
+awesome-claude-skills/
+
+griot/
+
+# Auto Claude data directory
+.auto-claude/
+.remember/tmp/
+youtube-cookies.txt
+griot.env

@@ -1,0 +1,22 @@
+# Dockerfile for PostgreSQL with pgvector support
+# Using pgvector's official image which has pgvector pre-built and optimized
+FROM pgvector/pgvector:pg16
+
+# Create initialization script to enable pgvector extension
+RUN mkdir -p /docker-entrypoint-initdb.d
+
+# Create script to enable pgvector in databases
+RUN cat > /docker-entrypoint-initdb.d/01-enable-pgvector.sh << 'EOF'
+#!/bin/bash
+set -e
+
+# Enable pgvector extension for the default database if database and user are set
+if [ -n "$POSTGRES_DB" ] && [ -n "$POSTGRES_USER" ]; then
+psql -v ON_ERROR_STOP=1 --username "$POSTGRES_USER" --dbname "$POSTGRES_DB" <<EOSQL
+CREATE EXTENSION IF NOT EXISTS vector;
+EOSQL
+echo "✅ pgvector extension enabled successfully"
+fi
+EOF
+
+RUN chmod +x /docker-entrypoint-initdb.d/01-enable-pgvector.sh

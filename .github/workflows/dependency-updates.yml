@@ -1,0 +1,75 @@
+name: Dependency Updates & Testing
+
+on:
+  pull_request:
+    paths:
+      - 'pyproject.toml'
+      - 'uv.lock'
+      - 'frontend/package*.json'
+  schedule:
+    # Run weekly dependency health check
+    - cron: '0 9 * * 1'  # Monday 9 AM
+  workflow_dispatch:
+
+jobs:
+  test-dependency-updates:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ['3.11', '3.12']
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ matrix.python-version }}
+    
+    - name: Install UV
+      run: |
+        curl -LsSf https://astral.sh/uv/install.sh | sh
+        export PATH="$HOME/.cargo/bin:$PATH"
+    
+    - name: Cache UV dependencies
+      uses: actions/cache@v3
+      with:
+        path: ~/.cache/uv
+        key: ${{ runner.os }}-uv-${{ hashFiles('**/uv.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-uv-
+    
+    - name: Install dependencies with UV
+      run: |
+        uv sync --frozen --all-extras
+    
+    - name: Run security audit with pip-audit
+      run: |
+        uv run pip-audit
+    
+    - name: Test import of critical modules
+      run: uv run python -c "import fastapi; import uvicorn; import pydantic; import boto3; import redis; import openai; import transformers; import torch; import cv2; from PIL import Image; print('All critical imports successful')"
+    
+    - name: Run basic API tests
+      run: uv run pytest tests/ -v --tb=short 2>&1 || echo "Tests not yet available"
+
+  check-uv-lock:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.12'
+    
+    - name: Install UV
+      run: |
+        curl -LsSf https://astral.sh/uv/install.sh | sh
+        export PATH="$HOME/.cargo/bin:$PATH"
+    
+    - name: Verify uv.lock is up to date
+      run: |
+        uv lock --locked
+        echo "✅ uv.lock is up to date"

@@ -1,0 +1,111 @@
+# Git and version control
+.git
+.gitignore
+.gitattributes
+
+# Python cache
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+.coverage
+.pytest_cache
+.tox
+.mypy_cache
+.dmypy.json
+dmypy.json
+
+# Virtual environments
+venv
+env
+.venv
+.env
+ENV
+
+# Development and IDE files
+.vscode
+.idea
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Documentation and development files
+README.md
+*.md
+docs/
+tests/
+scripts/tests/
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+
+# Temporary files
+temp/
+tmp/
+*.tmp
+*.temp
+
+# Logs
+*.log
+logs/
+
+# Docker files (don't copy into container)
+Dockerfile*
+.dockerignore
+docker-compose*.yml
+
+# CI/CD
+.github/
+.gitlab-ci.yml
+
+# Frontend files - managed separately in build stages
+frontend/node_modules/
+frontend/dist/
+frontend/.next/
+frontend/.vite/
+frontend/coverage/
+frontend/.nyc_output/
+frontend/.cache/
+frontend/.temp/
+frontend/.log
+
+# Keep only essential frontend files for build
+!frontend/package.json
+!frontend/package-lock.json
+!frontend/src/
+!frontend/public/
+!frontend/vite.config.ts
+!frontend/tsconfig.json
+!frontend/index.html
+!frontend/eslint.config.js
+
+# Local configuration that shouldn't be in container
+.env.local
+config.local.*
+
+# Additional cache and temp files to exclude
+*.pyc
+__pycache__/
+.mypy_cache/
+.pytest_cache/
+node_modules/
+
+# Development files that change frequently
+*.log
+*.tmp
+
+# UV cache (will be mounted as cache)
+.uv/

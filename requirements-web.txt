@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+pydantic
+python-multipart
+sse-starlette
+pydantic-core
+slowapi
+aiofiles
+python-dotenv
+loguru

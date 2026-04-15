@@ -1,0 +1,343 @@
+{
+  "optimal_caption_parameters_2025": {
+    "viral_bounce": {
+      "style": "viral_bounce",
+      "font_family": "Arial-Bold",
+      "font_size": 72,
+      "bold": true,
+      "position": "bottom_center",
+      "max_words_per_line": 4,
+      "all_caps": true,
+      "outline_color": "black",
+      "outline_width": 3,
+      "line_color": "#FFFFFF",
+      "word_color": "#FFFF00",
+      "description": "Optimized viral bounce with proper positioning and single-layer rendering"
+    },
+    "viral_cyan": {
+      "style": "viral_cyan",
+      "font_family": "Oswald-VariableFont_wght",
+      "font_size": 68,
+      "bold": true,
+      "position": "bottom_center",
+      "max_words_per_line": 3,
+      "all_caps": true,
+      "outline_color": "black",
+      "outline_width": 3,
+      "line_color": "#FFFFFF",
+      "word_color": "#00FFFF",
+      "description": "Viral cyan style with bright aqua highlights"
+    },
+    "viral_yellow": {
+      "style": "viral_yellow",
+      "font_family": "Arial-Bold",
+      "font_size": 70,
+      "bold": true,
+      "position": "bottom_center",
+      "max_words_per_line": 4,
+      "all_caps": true,
+      "outline_color": "black",
+      "outline_width": 3,
+      "line_color": "#FFFFFF",
+      "word_color": "#FFFF00",
+      "description": "Viral yellow style with bright yellow highlights"
+    },
+    "viral_green": {
+      "style": "viral_green",
+      "font_family": "Arial-Bold",
+      "font_size": 68,
+      "bold": true,
+      "position": "bottom_center",
+      "max_words_per_line": 4,
+      "all_caps": true,
+      "outline_color": "black",
+      "outline_width": 3,
+      "line_color": "#FFFFFF",
+      "word_color": "#00FF00",
+      "description": "Viral green style with bright green highlights"
+    },
+    "bounce": {
+      "style": "bounce",
+      "font_family": "Arial-Bold",
+      "font_size": 48,
+      "bold": true,
+      "position": "bottom_center",
+      "max_words_per_line": 6,
+      "all_caps": false,
+      "outline_color": "black",
+      "outline_width": 2,
+      "line_color": "#FFFFFF",
+      "word_color": "#FFFFFF",
+      "description": "Standard bounce effect with white text"
+    },
+    "highlight": {
+      "style": "highlight",
+      "font_family": "Arial-Bold",
+      "font_size": 52,
+      "bold": true,
+      "position": "bottom_center",
+      "max_words_per_line": 5,
+      "all_caps": false,
+      "outline_color": "black",
+      "outline_width": 2,
+      "line_color": "#FFFFFF",
+      "word_color": "#FFFF00",
+      "description": "Highlight style with yellow word emphasis"
+    },
+    "modern_neon": {
+      "style": "modern_neon",
+      "font_family": "Oswald-VariableFont_wght",
+      "font_size": 64,
+      "bold": true,
+      "position": "bottom_center",
+      "max_words_per_line": 3,
+      "all_caps": false,
+      "outline_color": "black",
+      "outline_width": 3,
+      "line_color": "#FFFFFF",
+      "word_color": "#00FFFF",
+      "description": "Modern neon style with cyan glow effects"
+    },
+    "cinematic_glow": {
+      "style": "cinematic_glow",
+      "font_family": "DejaVuSans-Bold",
+      "font_size": 56,
+      "bold": true,
+      "position": "bottom_center",
+      "max_words_per_line": 5,
+      "all_caps": false,
+      "outline_color": "black",
+      "outline_width": 2,
+      "line_color": "#FFFFFF",
+      "word_color": "#FFFFFF",
+      "description": "Cinematic style with subtle glow effects"
+    },
+    "social_pop": {
+      "style": "social_pop",
+      "font_family": "Arial-Bold",
+      "font_size": 60,
+      "bold": true,
+      "position": "bottom_center",
+      "max_words_per_line": 4,
+      "all_caps": false,
+      "outline_color": "black",
+      "outline_width": 3,
+      "line_color": "#FFFFFF",
+      "word_color": "#FF1493",
+      "description": "Social media pop style with bright pink highlights"
+    },
+    "classic": {
+      "style": "classic",
+      "font_family": "Arial-Regular",
+      "font_size": 24,
+      "bold": false,
+      "position": "bottom_center",
+      "max_words_per_line": 8,
+      "all_caps": false,
+      "outline_color": "black",
+      "outline_width": 1,
+      "line_color": "#FFFFFF",
+      "word_color": "#FFFFFF",
+      "description": "Classic subtitle style with standard white text"
+    },
+    "preferred_default": {
+      "style": "preferred_default",
+      "font_family": "Arial-Bold",
+      "font_size": "responsive",
+      "bold": true,
+      "position": "center",
+      "max_words_per_line": "responsive",
+      "all_caps": true,
+      "outline_color": "black",
+      "outline_width": "responsive",
+      "line_color": "white",
+      "word_color": "yellow",
+      "bounce_intensity": 1.5,
+      "animation_speed": 1.2,
+      "line_spacing": "responsive",
+      "margin_bottom": "responsive",
+      "text_align": "center",
+      "word_wrap": true,
+      "max_chars_per_line": "responsive",
+      "description": "Default viral bounce style with responsive sizing and center positioning - captures the exact current default behavior"
+    },
+    "standard_bottom": {
+      "style": "highlight",
+      "font_family": "Arial-Regular",
+      "font_size": 42,
+      "bold": false,
+      "position": "bottom_center",
+      "max_words_per_line": 5,
+      "all_caps": false,
+      "outline_color": "black",
+      "outline_width": 2,
+      "line_color": "#FFFFFF",
+      "word_color": "#FFFF00",
+      "description": "Standard readable captions for bottom placement"
+    },
+    "top_placement": {
+      "style": "highlight",
+      "font_family": "Arial-Regular",
+      "font_size": 38,
+      "bold": false,
+      "position": "top_center",
+      "max_words_per_line": 6,
+      "all_caps": false,
+      "outline_color": "black",
+      "outline_width": 2,
+      "line_color": "#FFFFFF",
+      "word_color": "#FFFF00",
+      "description": "Top placement with proper margins to avoid content blocking"
+    },
+    "mobile_optimized": {
+      "style": "highlight",
+      "font_family": "Arial-Bold",
+      "font_size": 32,
+      "bold": true,
+      "position": "bottom_center",
+      "max_words_per_line": 4,
+      "all_caps": false,
+      "outline_color": "black",
+      "outline_width": 2,
+      "line_color": "#FFFFFF",
+      "word_color": "#00FF00",
+      "description": "Mobile-first design with high readability"
+    },
+    "cinematic": {
+      "style": "fade_in",
+      "font_family": "DejaVuSans-Regular",
+      "font_size": 40,
+      "bold": false,
+      "position": "bottom_center",
+      "max_words_per_line": 8,
+      "all_caps": false,
+      "outline_color": "black",
+      "outline_width": 1,
+      "line_color": "#F0F0F0",
+      "word_color": "#F0F0F0",
+      "description": "Elegant cinematic style for professional content"
+    }
+  },
+  "caption_style_presets": {
+    "viral_bounce": {
+      "caption_color": "#FFFF00",
+      "font_size": 72,
+      "font_family": "Arial-Bold",
+      "words_per_line": 4,
+      "caption_position": "bottom"
+    },
+    "viral_cyan": {
+      "caption_color": "#00FFFF",
+      "font_size": 68,
+      "font_family": "Oswald-VariableFont_wght",
+      "words_per_line": 3,
+      "caption_position": "bottom"
+    },
+    "viral_yellow": {
+      "caption_color": "#FFFF00",
+      "font_size": 70,
+      "font_family": "Arial-Bold",
+      "words_per_line": 4,
+      "caption_position": "bottom"
+    },
+    "viral_green": {
+      "caption_color": "#00FF00",
+      "font_size": 68,
+      "font_family": "Arial-Bold",
+      "words_per_line": 4,
+      "caption_position": "bottom"
+    },
+    "bounce": {
+      "caption_color": "#FFFFFF",
+      "font_size": 48,
+      "font_family": "Arial-Bold",
+      "words_per_line": 6,
+      "caption_position": "bottom"
+    },
+    "highlight": {
+      "caption_color": "#FFFF00",
+      "font_size": 52,
+      "font_family": "Arial-Bold",
+      "words_per_line": 5,
+      "caption_position": "bottom"
+    },
+    "modern_neon": {
+      "caption_color": "#00FFFF",
+      "font_size": 64,
+      "font_family": "Oswald-VariableFont_wght",
+      "words_per_line": 3,
+      "caption_position": "bottom"
+    },
+    "cinematic_glow": {
+      "caption_color": "#FFFFFF",
+      "font_size": 56,
+      "font_family": "DejaVuSans-Bold",
+      "words_per_line": 5,
+      "caption_position": "bottom"
+    },
+    "social_pop": {
+      "caption_color": "#FF1493",
+      "font_size": 60,
+      "font_family": "Arial-Bold",
+      "words_per_line": 4,
+      "caption_position": "bottom"
+    },
+    "classic": {
+      "caption_color": "#FFFFFF",
+      "font_size": 24,
+      "font_family": "Arial-Regular",
+      "words_per_line": 8,
+      "caption_position": "bottom"
+    },
+    "preferred_default": {
+      "caption_color": "#FFFF00",
+      "font_size": "responsive",
+      "font_family": "Arial-Bold",
+      "words_per_line": "responsive",
+      "caption_position": "center"
+    }
+  },
+  "best_practices_2025": {
+    "font_size_guidelines": {
+      "minimum": 24,
+      "standard": 48,
+      "large": 64,
+      "viral": 72,
+      "maximum": 120,
+      "mobile_optimized": "24-48px",
+      "desktop_optimized": "48-72px",
+      "note": "Font sizes scaled for 1920x1080 resolution. Viral content should use 64-72px for maximum impact."
+    },
+    "positioning_margins": {
+      "top": 150,
+      "bottom": 180,
+      "left": 80,
+      "right": 80,
+      "center": 80,
+      "mobile_safe_area": "Additional 40px margin on mobile devices",
+      "note": "Top 150px (avoid cutoff), Bottom 180px (avoid player controls)"
+    },
+    "readability_rules": {
+      "max_words_per_line": "3-4 words for viral content, 5-8 for standard content",
+      "reading_speed": "Maximum 180 words per minute (3 words/second)",
+      "minimum_duration": "2 seconds per caption line",
+      "contrast": "High contrast white text with black outline recommended",
+      "line_spacing": "1.2-1.5x font size for optimal readability"
+    },
+    "viral_content_tips": {
+      "use_caps_sparingly": "ALL CAPS for emphasis only, not entire captions",
+      "bounce_intensity": "Moderate bounce (120-140% scale) for readability",
+      "color_schemes": ["#FFFFFF on black outline", "#00FFFF accent", "#FFFF00 highlight", "#FF1493 social pop"],
+      "animation_timing": "Quick bounce (300-600ms) synchronized with speech",
+      "font_families": ["Arial-Bold for impact", "Oswald for modern look", "DejaVuSans for readability"]
+    },
+    "style_recommendations": {
+      "tiktok_viral": "viral_bounce, viral_cyan, viral_yellow, social_pop",
+      "youtube_shorts": "viral_bounce, modern_neon, highlight",
+      "instagram_reels": "social_pop, modern_neon, cinematic_glow",
+      "professional": "classic, cinematic_glow, highlight",
+      "educational": "classic, highlight, cinematic",
+      "entertainment": "viral_bounce, social_pop, bounce"
+    }
+  }
+}

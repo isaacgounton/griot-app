@@ -1,0 +1,10 @@
+Pillow
+ffmpeg-python
+opencv-python>=4.8.0
+pytesseract
+pydub
+srt
+soundfile
+emoji
+edge-tts==7.2.7
+moviepy>=2.0.0

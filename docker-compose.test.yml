@@ -1,0 +1,59 @@
+version: "3.8"
+
+services:
+  # Test environment for dependency updates
+  griot-test:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: test
+    environment:
+      - ENVIRONMENT=test
+      - DATABASE_URL=postgresql://test:test@postgres-test:5432/griot_test
+      - REDIS_URL=redis://redis-test:6379
+      - AWS_ACCESS_KEY_ID=test
+      - AWS_SECRET_ACCESS_KEY=test
+      - AWS_REGION=us-east-1
+      - S3_BUCKET=test-bucket
+      # Hugging Face Cache Configuration
+      - HF_HOME=/tmp/.cache/huggingface
+    depends_on:
+      - postgres-test
+      - redis-test
+    volumes:
+      - ./tests:/app/tests
+    command: >
+      sh -c "
+        echo '🧪 Testing dependency compatibility...' &&
+        python -c 'import fastapi, uvicorn, pydantic, boto3, redis, openai, transformers, torch, cv2, PIL; print(\"✅ Critical imports successful\")' &&
+        echo '🔍 Running tests...' &&
+        pytest tests/ -v --tb=short &&
+        echo '✅ All tests passed!'
+      "
+    networks:
+      - test-network
+
+  postgres-test:
+    build:
+      context: .
+      dockerfile: Dockerfile.postgres
+    environment:
+      POSTGRES_DB: griot_test
+      POSTGRES_USER: test
+      POSTGRES_PASSWORD: test
+    volumes:
+      - postgres_test_data:/var/lib/postgresql/data
+    networks:
+      - test-network
+
+  redis-test:
+    image: redis:7-alpine
+    networks:
+      - test-network
+
+volumes:
+  postgres_test_data:
+
+networks:
+  test-network:
+    driver: bridge

@@ -1,0 +1,32 @@
+version: "3.8"
+
+# Development override - use with: docker-compose -f docker-compose.prod.yml -f docker-compose.dev.yml up
+
+services:
+  api:
+    build:
+      target: development
+      # Enable BuildKit for faster builds with caching
+      args:
+        BUILDKIT_INLINE_CACHE: 1
+      cache_from:
+        - ${DOCKER_REGISTRY:-ghcr.io}/${DOCKER_IMAGE:-griot}:dev-cache
+    volumes:
+      # Mount source code for hot reload (backend)
+      - ./app:/app/app:ro
+      # Mount frontend source for development builds
+      - ./frontend:/app/frontend:ro
+      # Mount scripts for development
+      - ./scripts:/app/scripts:ro
+    environment:
+      - DEBUG=true
+      # Hugging Face Cache Configuration
+      - HF_HOME=/app/.cache/huggingface
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload --reload-dir /app/app
+
+  speaches:
+    # Expose Speaches UI in dev for debugging
+    ports:
+      - "8880:8000"
+    environment:
+      ENABLE_UI: "true"

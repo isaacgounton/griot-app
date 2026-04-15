@@ -1,0 +1,1 @@
+# Media generation strategies for unified video pipeline
